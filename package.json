@@ -1,0 +1,17 @@
+{
+  "name": "owasp-wstg-tracker",
+  "version": "1.0.0",
+  "description": "Static OWASP Web Security Testing Guide progress tracker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "keywords": [
+    "owasp",
+    "wstg",
+    "tracker"
+  ],
+  "author": "",
+  "license": "MIT"
+}
