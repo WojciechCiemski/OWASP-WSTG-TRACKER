@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OWASP WSTG Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>OWASP WSTG Tracker</h1>
+      <p class="tagline">Track your progress across the full OWASP Web Security Testing Guide.</p>
+    </div>
+    <div class="progress" id="progress-summary">
+      <div class="progress-bar"><span id="progress-bar-fill"></span></div>
+      <p id="progress-text"></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        Search
+        <input type="search" id="search-input" placeholder="Search tests or descriptions" />
+      </label>
+      <label>
+        Category
+        <select id="category-filter">
+          <option value="all">All categories</option>
+        </select>
+      </label>
+      <label>
+        Status
+        <select id="status-filter">
+          <option value="all">All statuses</option>
+        </select>
+      </label>
+      <div class="control-buttons">
+        <button id="export-button" type="button">Export Progress</button>
+        <label class="import-label">
+          Import Progress
+          <input type="file" id="import-input" accept="application/json" />
+        </label>
+        <button id="reset-button" type="button" class="reset">Reset Progress</button>
+      </div>
+    </section>
+
+    <section id="tests-container" class="tests"></section>
+  </main>
+
+  <footer>
+    <p>
+      Data based on the <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">OWASP Web Security Testing Guide</a>.
+      Progress is stored locally in your browser.
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
